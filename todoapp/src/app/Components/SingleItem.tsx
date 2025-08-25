@@ -3,20 +3,29 @@ import React from 'react'
 interface SingleItemProps {
   id: string; // unique identifier for the item
   name: string;
+  completed?: boolean;
   onEdit?: (id: string) => void;
   onDelete?: (id: string) => void;
+  onToggleComplete?: (id: string, completed: boolean) => void;
 }
 
 const SingleItem: React.FC<SingleItemProps> = ({
   id,
   name,
+  completed = false,
   onEdit,
   onDelete,
+  onToggleComplete,
 }) => {
   return (
     <div className="flex flex-row items-center gap-4 py-2">
       {/* checkbox to mark complete */}
-      <input type="checkbox" className="checkbox checkbox-primary w-6 h-6" />
+      <input
+        type="checkbox"
+        checked={completed}
+        onChange={(e) => onToggleComplete?.(id, e.target.checked)}
+        className="checkbox checkbox-primary w-6 h-6"
+      />
 
       {/* name grows, truncates if too long */}
       <p className="flex-1 text-lg font-medium truncate">{name}</p>
