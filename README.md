@@ -66,4 +66,8 @@ npm run dev
 /tailwind.config.js           # Tailwind configuration
 /package.json                 # Dependencies & scripts
 /README.md
+``` 
+## 📜 License
+
+This repository is **free to use and modify** for learning purposes.
 
