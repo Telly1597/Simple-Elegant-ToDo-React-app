@@ -59,7 +59,7 @@ npm run dev
     ├── SingleItem.tsx        # Single task row
     ├── DeletePopup.tsx       # Confirm delete modal
     ├── EditPopUp.tsx         # Edit task modal
-  /data
+  /Data
     └── data.ts               # Initial seed tasks
   page.tsx (HomePage)         # Main page rendering the list
 
